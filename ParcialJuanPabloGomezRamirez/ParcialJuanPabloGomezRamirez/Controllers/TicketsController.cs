@@ -68,12 +68,26 @@ namespace ParcialJuanPabloGomezRamirez.Controllers
         {
             try
             {
-                if (id != ticket.id) return NotFound("ticket not found");
+                // if ticket doesn't exist
+                if (id != ticket.id)
+                {
+                    return NotFound("Boleta no valida");
 
-                
+                }
+                // if the ticket was not used
+                if (!ticket.IsUsed)
+                {
+                    ticket.IsUsed = true;
+                    //  Update...
+                    _context.Tickets.Update(ticket);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    return NotFound("Boleta ya usada");
+                }
 
-                _context.Tickets.Update(ticket);
-                await _context.SaveChangesAsync(); // Aquí es donde se hace el Update...
+                 
             }
             catch (DbUpdateException dbUpdateException)
             {
@@ -87,6 +101,7 @@ namespace ParcialJuanPabloGomezRamirez.Controllers
 
             return Ok(ticket);
         }
+
         [HttpDelete, ActionName("Delete")]
         [Route("Delete/{id}")]
         public async Task<ActionResult> DeleteTicket(Guid? id)
@@ -101,5 +116,8 @@ namespace ParcialJuanPabloGomezRamirez.Controllers
 
             return Ok(String.Format("El ticket fue eliminado!"));
         }
+
+
+        
     }
 }

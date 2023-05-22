@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcialJuanPabloGomezRamirez", "ParcialJuanPabloGomezRamirez\ParcialJuanPabloGomezRamirez.csproj", "{1E1CCAE0-06C6-4E11-AC9E-E5D5D0E27A0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcialJuanPabloGomezRamirez", "ParcialJuanPabloGomezRamirez\ParcialJuanPabloGomezRamirez.csproj", "{1E1CCAE0-06C6-4E11-AC9E-E5D5D0E27A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPages", "..\WebPages\WebPages\WebPages.csproj", "{473787B2-0838-46BA-AFDC-624ED92CDAF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1E1CCAE0-06C6-4E11-AC9E-E5D5D0E27A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E1CCAE0-06C6-4E11-AC9E-E5D5D0E27A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E1CCAE0-06C6-4E11-AC9E-E5D5D0E27A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473787B2-0838-46BA-AFDC-624ED92CDAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473787B2-0838-46BA-AFDC-624ED92CDAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473787B2-0838-46BA-AFDC-624ED92CDAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473787B2-0838-46BA-AFDC-624ED92CDAF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

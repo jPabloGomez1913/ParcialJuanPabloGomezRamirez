@@ -35,7 +35,15 @@ namespace ParcialJuanPabloGomezRamirez.Controllers
         {
             var ticket = await _context.Tickets.FirstOrDefaultAsync(c => c.id  == id); //Select * From Countries Where Id = "..."
 
-            if (ticket == null) return NotFound();
+            if (ticket == null)
+            {
+                return NotFound();
+            }
+            if (ticket.IsUsed)
+            { 
+                return Ok("Boleta ya usada en la tribuna "
+                    +ticket.EntranceGate+" en la fecha "+ticket.UseDate);
+            }
 
             return Ok(ticket);
         }
@@ -84,7 +92,7 @@ namespace ParcialJuanPabloGomezRamirez.Controllers
                 }
                 else
                 {
-                    return NotFound("Boleta ya usada");
+                    return NotFound("Boleta ya usad");
                 }
 
                  

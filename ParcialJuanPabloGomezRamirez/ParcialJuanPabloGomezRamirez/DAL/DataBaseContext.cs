@@ -13,7 +13,7 @@ namespace ParcialJuanPabloGomezRamirez.DAL
 
         }
 
-        private DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
 
        /* protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

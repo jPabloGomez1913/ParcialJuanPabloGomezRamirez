@@ -20,5 +20,13 @@ namespace WebPages.Controllers
             List<Ticket> tickets = JsonConvert.DeserializeObject<List<Ticket>>(json);
             return View(tickets);
         }
+
+        /*[HttpGet, ActionName("Get")]
+        [Route("Get/{id}")]
+
+        public async Task<IActionResult> GetTicketById()
+        {
+
+        }*/
     }
 }
